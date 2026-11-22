@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CBT Latihan PAS PAI Kelas X 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --navy:#063b2c;--emerald:#16c784;--emerald2:#39e98b;--amber:#eabf43;--amber2:#f5d45e;
+  --red:#ef6262;--bg:#031f18;--card:#073526;--text:#e5f4ec;--muted:#91b6a5;
+  --border:#174b39;--radius:20px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:radial-gradient(ellipse at top,#0a3b2b 0%,#031f18 55%,#021811 100%);color:var(--text);min-height:100vh}
+button{font-family:inherit}
+.header{background:rgba(3,31,24,.96);color:white;position:sticky;top:0;z-index:100;border-bottom:1px solid #174b39;box-shadow:0 8px 28px rgba(0,0,0,.22);backdrop-filter:blur(14px)}
+.header-inner{max-width:980px;margin:0 auto;padding:14px 20px;min-height:72px;display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:nowrap;position:relative}
+.header-badge{background:linear-gradient(135deg,#23d987,#a5f04d);color:#063b2c;font-weight:800;font-size:11px;padding:7px 11px;border-radius:10px;letter-spacing:.5px;position:absolute;left:20px;top:50%;transform:translateY(-50%)}
+.header h1{font-size:14px;font-weight:800;flex:none;line-height:1.4;text-align:center;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:max-content;max-width:calc(100% - 190px);}
+.header h1 span{color:#a6f05a}
+#timer{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;background:#0b3024;padding:8px 12px;border-radius:10px;color:#e9f9ef;border:1px solid #286048;white-space:nowrap}
+#timer.urgent{background:rgba(239,68,68,.22);color:#ff9b9b;animation:pulse .8s infinite}
+#lock-badge{background:rgba(234,191,67,.12);border:1px solid rgba(234,191,67,.4);color:#f5d45e;font-size:10px;font-weight:800;padding:6px 10px;border-radius:20px;white-space:nowrap}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+.progress-wrap{background:#05291e;padding:0 20px 12px}
+.progress-inner{max-width:940px;margin:0 auto}
+.progress-info{display:flex;justify-content:space-between;font-size:11px;color:#a2c6b3;margin-bottom:7px}
+.progress-bar{height:6px;background:#174b39;border-radius:99px;overflow:hidden}
+.progress-fill{height:100%;background:linear-gradient(90deg,#19c77b,#b2f34c);border-radius:99px;transition:width .4s ease}
+.main{max-width:940px;margin:0 auto;padding:24px 16px 50px;display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.main>*{min-width:0}
+.welcome-card{background:linear-gradient(120deg,#08452f,#0a3929);border:1px solid #1b5b40;border-radius:22px;padding:20px;box-shadow:0 8px 26px rgba(0,0,0,.14)}
+.welcome-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.avatar{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#1be28c,#a5f04d);display:grid;place-items:center;color:#063b2c;font-weight:900;font-size:17px}
+.welcome-name{font-weight:800;font-size:14px}
+.welcome-sub{font-size:11px;color:#9fc4b0;margin-top:4px}
+.section-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;min-width:0}
+.section-tab{flex:1;min-width:80px;text-align:center;padding:10px 8px;border-radius:12px;background:#062d21;border:1px solid #174b39;color:#a6c9b7;font-size:11px;font-weight:700}
+.section-tab.active{background:#0e5638;color:#b4f45d;border-color:#27885a;box-shadow:inset 0 -2px #a6ef4e}
+.info-strip{background:#0a3023;border:1px solid #b18b2b;border-left:4px solid #e9c34d;color:#e6dba9;border-radius:12px;padding:12px 14px;font-size:12px;line-height:1.6}
+.info-strip strong{color:#ffe27c}
+.summary-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.summary-tile{background:#073526;border:1px solid #174b39;border-radius:14px;padding:13px}
+.summary-value{font-size:20px;font-weight:800;color:#b3f35a}
+.summary-label{font-size:10px;color:#9dbdab;margin-top:4px}
+.nav-card{background:#073526;border:1px solid #174b39;border-radius:18px;padding:16px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.nav-title{font-size:11px;font-weight:800;color:#a9cbbb;letter-spacing:.6px;text-transform:uppercase;margin-bottom:11px}
+.nav-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:6px}
+.nav-btn{aspect-ratio:1;border:1px solid #285b46;background:#082d22;border-radius:9px;font-size:11px;font-weight:800;cursor:pointer;color:#a7c4b5;display:flex;align-items:center;justify-content:center;transition:all .18s}
+.nav-btn:hover{border-color:#38d98a;color:#b7f45d}
+.nav-btn.answered{background:#123e2d;border-color:#1f9c62;color:#c7f6d7}
+.nav-btn.active{background:linear-gradient(135deg,#17c879,#9ce84b);border-color:#9ce84b;color:#063b2c;transform:scale(1.08)}
+.legend{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:10px;color:#9ab9a8}
+.legend-dot{width:10px;height:10px;border-radius:3px;border:1px solid #709786}
+.soal-card{background:#073526;border:1px solid #174b39;border-radius:20px;padding:23px;box-shadow:0 6px 22px rgba(0,0,0,.15);animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.soal-meta{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.soal-num{background:#0d4933;color:#c5f6d5;font-size:12px;font-weight:800;padding:6px 12px;border-radius:8px;border:1px solid #216a49}
+.tipe-badge{font-size:10px;font-weight:800;padding:5px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.4px}
+.tipe-pg{background:#123f31;color:#9ef0c0;border:1px solid #236747}
+.pertanyaan{font-size:15px;font-weight:700;color:#effaf3;margin-bottom:16px;line-height:1.7}
+.options{display:flex;flex-direction:column;gap:9px}
+.option-btn{display:flex;align-items:flex-start;gap:12px;padding:12px 14px;border:1px solid #285b46;border-radius:12px;background:#062b20;cursor:pointer;font-size:13px;text-align:left;transition:all .18s;color:#d8eee2;line-height:1.55;width:100%}
+.option-btn:hover:not(.disabled){border-color:#38d98a;background:#0a3a29}
+.opt-label{min-width:27px;height:27px;background:#0e4530;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:11px;color:#b9ef7a;flex-shrink:0}
+.option-btn.selected{border-color:#25d17f;background:#0b4931;box-shadow:0 0 0 1px rgba(37,209,127,.18)}
+.option-btn.selected .opt-label{background:#28d584;color:#063b2c}
+.option-btn.disabled{cursor:default}
+.instruksi{font-size:12px;color:#ffc2c2;font-weight:600;font-style:italic;margin-bottom:12px;padding:8px 12px;background:#482b2b;border-radius:8px;border:1px solid #754040}
+.pembahasan{margin-top:18px;border-top:1px dashed #285b46;padding-top:16px;display:none;animation:fadeIn .3s ease}
+.pembahasan.show{display:block}
+.pemb-header{font-size:11px;font-weight:800;color:#a7c9b7;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+.step{font-size:13px;color:#d0e7d9;margin-bottom:6px;padding-left:18px;position:relative;line-height:1.65}
+.step::before{content:"→";position:absolute;left:0;color:#63e5a1;font-weight:800}
+.jawaban-final{margin-top:10px;padding:11px 14px;background:#0d4933;border-radius:9px;font-weight:800;font-size:13px;color:#b8f3cd;border:1px solid #287a50}
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}
+.btn{padding:11px 18px;border-radius:11px;border:1px solid transparent;font-size:13px;font-weight:800;cursor:pointer;transition:all .18s;display:flex;align-items:center;gap:7px}
+.btn-primary{background:linear-gradient(110deg,#18c97b,#a6ed4c);color:#063b2c}
+.btn-primary:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.btn-outline{background:#082d22;color:#d5eee0;border-color:#285b46}
+.btn-outline:hover{border-color:#39d98b;color:#aef36b}
+.btn-accent{background:#e9c34d;color:#302707}
+.btn-accent:hover{background:#f5d45e}
+.btn:disabled{opacity:.35;cursor:default;transform:none!important}
+#result-screen{display:none;background:linear-gradient(155deg,#0b4935 0%,#082f25 100%);border:1px solid #287451;border-radius:20px;padding:30px 22px;text-align:center;box-shadow:0 8px 26px rgba(0,0,0,.24)}
+.result-emoji{font-size:54px;margin-bottom:12px}
+.result-title{font-size:24px;font-weight:900;color:#e9f8ef;margin-bottom:6px}
+.result-sub{font-size:13px;color:#a1c2b0;margin-bottom:20px}
+.score-big{font-size:64px;font-weight:900;font-family:'JetBrains Mono',monospace;color:#a8ed55;line-height:1;margin-bottom:6px}
+.score-label{font-size:12px;color:#a1c2b0;margin-bottom:20px}
+.predikat{display:inline-block;padding:7px 18px;border-radius:20px;font-weight:800;font-size:13px;margin-bottom:20px}
+.donut-section{margin:20px 0 24px;text-align:center;background:#0b3b2d;border:1px solid #28634a;border-radius:18px;padding:20px 14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.035)}
+.donut-section-title{font-size:16px;font-weight:900;color:#f3fff7;margin-bottom:18px;letter-spacing:.2px}
+.donut-container{display:inline-block;position:relative;width:190px;height:190px}
+.donut-container canvas{display:block}
+.donut-center-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.donut-score-num{font-size:30px;font-weight:800;font-family:'JetBrains Mono',monospace;color:#e5f4ec;line-height:1}
+.donut-score-sub{font-size:11px;color:#9dbdab;font-weight:600;margin-top:3px}
+.donut-legend{display:flex;gap:14px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.donut-legend-item{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:#f0fff5;background:#124a37;border:1px solid #327454;border-radius:9px;padding:8px 10px}
+.donut-legend-dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.donut-total{font-size:12px;color:#c4dfce;margin-top:12px;font-weight:600}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}
+.stat-box{padding:15px 8px;border-radius:13px;border:1px solid #39745a;background:#124332;box-shadow:0 3px 10px rgba(0,0,0,.12)}
+.stat-box.correct-box{border-color:#38b879;background:#104b35}
+.stat-box.wrong-box{border-color:#d66a6a;background:#542f32}
+.stat-box.skip-box{border-color:#8295a7;background:#344655}
+.stat-num{font-size:25px;font-weight:900;color:#ffffff}
+.stat-lbl{font-size:11px;color:#eff8f2;margin-top:5px;font-weight:700}
+.correct-box .stat-num{color:#75e9a9}.wrong-box .stat-num{color:#ff9999}
+#review-section{display:none;margin-top:20px}
+#review-section h2{color:#e5f4ec!important}
+.review-item{background:#073526;border:1px solid #174b39;border-radius:14px;padding:17px;margin-bottom:12px;border-left:4px solid #527866;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.review-item.correct{border-left-color:#28cf82}.review-item.wrong{border-left-color:#ef6262}
+.review-item .soal-num{background:#0d4933}
+@media(max-width:600px){
+ .header-inner{padding:12px 12px;gap:7px;min-height:70px}.header-badge{left:12px}.header h1{font-size:11px;text-align:center;max-width:calc(100% - 150px)}#lock-badge{display:none}#timer{font-size:13px;padding:8px 9px;min-width:76px;text-align:center}
+ .section-tabs{gap:6px}.section-tab{min-width:0;padding:10px 2px;font-size:10.5px}
+ .main{padding:16px 12px 36px;gap:13px}.soal-card{padding:16px}
+ .score-big{font-size:52px}.donut-container{width:165px;height:165px}.donut-section{padding:17px 10px}.donut-legend{gap:8px}.donut-legend-item{font-size:11px;padding:7px 8px}.stats-grid{gap:8px}
+ .summary-grid{gap:7px}.summary-tile{padding:11px 9px}.summary-value{font-size:18px}
+ .actions .btn{flex:1;justify-content:center;padding:11px 10px}
+}
+
+
+/* Security warning: hidden until a real visibility violation is detected */
+#violation-overlay{
+  display:none;position:fixed;inset:0;z-index:9999;
+  align-items:center;justify-content:center;flex-direction:column;
+  text-align:center;padding:28px 22px;
+  background:rgba(2,24,17,.97);color:#effaf3;
+}
+#violation-overlay.show{display:flex}
+#violation-overlay .viol-icon{font-size:42px;margin-bottom:14px}
+#violation-overlay .viol-title{font-size:22px;font-weight:900;color:#ff7777;margin-bottom:9px}
+#violation-overlay .viol-sub{font-size:14px;line-height:1.6;max-width:360px;color:#e3eee7}
+#violation-overlay .viol-count{font-size:44px;font-weight:900;color:#f5d45e;margin-top:12px;line-height:1}
+#violation-overlay .viol-label{font-size:12px;color:#b6cfc1;margin:5px 0 18px}
+#violation-overlay .viol-btn{border:0;border-radius:11px;padding:12px 18px;background:linear-gradient(110deg,#18c97b,#a6ed4c);color:#063b2c;font-size:13px;font-weight:800;cursor:pointer}
+
+</style>
+</head>
+<body>
+
+<!-- VIOLATION OVERLAY -->
+<div id="violation-overlay">
+  <div class="viol-icon">🚨</div>
+  <div class="viol-title">PELANGGARAN TERDETEKSI!</div>
+  <div class="viol-sub">Kamu keluar dari halaman CBT selama ujian berlangsung!</div>
+  <div class="viol-count" id="viol-count">0</div>
+  <div class="viol-label">total pelanggaran</div>
+  <div style="color:rgba(255,255,255,.85);font-size:14px;margin-bottom:24px;max-width:320px;line-height:1.6;">
+    ⚠️ Setiap pelanggaran dicatat. Jika kamu mengulanginya, hasilmu akan otomatis dikumpulkan!
+  </div>
+  <button class="viol-btn" onclick="dismissViolation()">✅ Kembali ke Soal</button>
+</div>
+
+<div class="header">
+  <div class="header-inner">
+    <span class="header-badge">R</span>
+    <h1>REVANDER FAUSTA HADRIAN<br><span>Latihan PAS PAI · Kelas 10 PSPT 2</span></h1>
+    <span id="lock-badge">MODE LATIHAN</span>
+    <div id="timer">60:00</div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-inner">
+      <div class="progress-info">
+        <span id="progress-text">Soal 1 dari 50</span>
+        <span id="answered-count">0 dijawab</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:2%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="main">
+  <section class="welcome-card">
+    <div class="welcome-top">
+      <div class="avatar">R</div>
+      <div>
+        <div class="welcome-name">REVANDER FAUSTA HADRIAN</div>
+        <div class="welcome-sub">Kelas 10 PSPT 2 · SMK Negeri 1 Surabaya</div>
+      </div>
+    </div>
+    <div class="section-tabs">
+      <div class="section-tab">⌂<br>Beranda</div>
+      <div class="section-tab">◉<br>Materi</div>
+      <div class="section-tab active">▣<br>Belajar</div>
+      <div class="section-tab">✓<br>Evaluasi</div>
+      <div class="section-tab">☾<br>Progres</div>
+    </div>
+  </section>
+  <div class="info-strip"><strong>Persiapan PAS PAI 2026</strong><br>Latihan mencakup Al-Qur'an dan fastabiqul khairat, keimanan (rukun iman dan syu'abul iman), perilaku tercela, ekonomi syariah, serta sejarah dan dakwah Islam di Nusantara. Pilih jawaban paling tepat, lalu kumpulkan untuk melihat nilai dan pembahasan.</div>
+  <div class="summary-grid">
+    <div class="summary-tile"><div class="summary-value">50</div><div class="summary-label">Jumlah soal</div></div>
+    <div class="summary-tile"><div class="summary-value">60:00</div><div class="summary-label">Waktu latihan</div></div>
+    <div class="summary-tile"><div class="summary-value">5 TEMA</div><div class="summary-label">Cakupan materi</div></div>
+  </div>
+  <div class="nav-card">
+    <div class="nav-title">Navigator Soal</div>
+    <div class="nav-grid" id="nav-grid"></div>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#0d1b3e;border-color:#0d1b3e"></div>Dijawab</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#059669;border-color:#059669"></div>Aktif</div>
+      <div class="legend-item"><div class="legend-dot" style="border-color:#94a3b8;border-radius:50%"></div>Pilih satu jawaban yang paling tepat</div>
+    </div>
+  </div>
+
+  <div id="soal-area">
+    <div class="soal-card" id="soal-card"></div>
+    <div class="actions" id="actions"></div>
+  </div>
+
+  <div id="result-screen"></div>
+  <div id="review-section"></div>
+</div>
+
+<footer style="max-width:940px;margin:0 auto 28px;padding:0 16px;text-align:center;color:#6f9985;font-size:11px">SMK Negeri 1 Surabaya · PAS Pendidikan Agama Islam Kelas X · 2026</footer>
+<script>
+// ═══════════════════════════════════════════════════════
+// LOCK SYSTEM – Anti Keluar
+// ═══════════════════════════════════════════════════════
+let current = 0;
+let answers = [];
+let submitted = false;
+let timerInterval = null;
+let timeLeft = 60 * 60;
+let violationCount = 0;
+let examActive = true;
+let audioCtx = null;
+let lastViolationAt = 0;
+let securityArmed = false;
+
+function getAudioCtx() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return audioCtx;
+}
+
+function playAlarm() {
+  try {
+    const ctx = getAudioCtx();
+    // Layered alarm: alternating beep pattern
+    const freqs = [880, 1100, 880, 1100, 880];
+    freqs.forEach((freq, i) => {
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(freq, ctx.currentTime + i * 0.2);
+      gain.gain.setValueAtTime(0, ctx.currentTime + i * 0.2);
+      gain.gain.linearRampToValueAtTime(0.6, ctx.currentTime + i * 0.2 + 0.02);
+      gain.gain.linearRampToValueAtTime(0, ctx.currentTime + i * 0.2 + 0.18);
+      osc.start(ctx.currentTime + i * 0.2);
+      osc.stop(ctx.currentTime + i * 0.2 + 0.2);
+    });
+  } catch(e){}
+}
+
+function triggerViolation() {
+  if (!examActive || submitted) return;
+  const now = Date.now();
+  if (now - lastViolationAt < 2000) return;
+  lastViolationAt = now;
+  violationCount++;
+  document.getElementById('viol-count').textContent = violationCount;
+  document.getElementById('violation-overlay').classList.add('show');
+  playAlarm();
+  // Auto-submit jika pelanggaran >= 3
+  if (violationCount >= 3) {
+    setTimeout(() => {
+      document.getElementById('violation-overlay').classList.remove('show');
+      alert('⛔ Kamu telah melakukan 3 pelanggaran! Jawaban dikumpulkan secara otomatis.');
+      submitAll();
+    }, 2500);
+  }
+}
+
+function dismissViolation() {
+  document.getElementById('violation-overlay').classList.remove('show');
+  // Unlock audio context on user gesture
+  try { getAudioCtx().resume(); } catch(e){}
+}
+
+// Aktifkan deteksi setelah halaman benar-benar tampil, agar proses awal browser
+// atau pemuatan file lokal tidak dihitung sebagai pelanggaran.
+window.addEventListener('pageshow', () => {
+  setTimeout(() => { securityArmed = true; }, 1200);
+});
+
+// Deteksi saat siswa berpindah tab, membuka aplikasi lain, atau meminimalkan browser.
+document.addEventListener('visibilitychange', () => {
+  if (securityArmed && document.visibilityState === 'hidden' && examActive && !submitted) {
+    triggerViolation();
+  }
+});
+
+// Blokir klik kanan
+// Klik kanan tetap tersedia dalam mode latihan.
+
+// Blokir F12, Ctrl+Shift+I, dll saat ujian
+document.addEventListener('keydown', e => {
+  if (!examActive || submitted) return;
+  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I','J','C'].includes(e.key))
+      || (e.ctrlKey && e.key === 'U')) {
+    e.preventDefault();
+    triggerViolation();
+  }
+});
+
+// Unlock AudioContext saat tap/klik pertama (mobile requirement)
+document.addEventListener('click', () => {
+  try { getAudioCtx().resume(); } catch(e){}
+}, {once: true});
+
+// ═══════════════════════════════════════════════════════
+// DATA SOAL – 50 Soal Latihan PAS PAI Kelas X 2026
+const soalData = [
+ {
+  "no": 1,
+  "tipe": "pg",
+  "tanya": "Pak Raka menjelaskan bahwa Islam, Yahudi, dan Nasrani disebut agama samawi atau agama langit. Landasan utama yang menjadi dasar penyebutan tersebut adalah ....",
+  "opsi": [
+   "Hasil perenungan para filsuf tentang Tuhan",
+   "Tradisi leluhur yang diwariskan turun-temurun",
+   "Wahyu dari Allah Swt. yang disampaikan melalui para rasul",
+   "Pengalaman spiritual para tokoh agama"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Agama samawi bersumber dari wahyu Allah Swt. yang disampaikan melalui para rasul, sehingga disebut agama langit. Pilihan lain berasal dari akal, tradisi, atau pengalaman manusia."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 2,
+  "tipe": "pg",
+  "tanya": "Perhatikan potongan Q.S. Al-Maidah/5:48 berikut!\n\n<span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">وَاَنْزَلْنَآ اِلَيْكَ الْكِتٰبَ بِالْحَقِّ</span>\n\nTerjemahan yang tepat untuk potongan ayat tersebut adalah ....",
+  "opsi": [
+   "Dan Kami telah menurunkan Kitab (Al-Qur'an) kepadamu dengan membawa kebenaran",
+   "Dan Kami telah memberikan kitab kepada kaummu agar mereka berlaku adil",
+   "Dan Kami telah menurunkan kitab-kitab sebelummu dengan membawa kebenaran",
+   "Dan Kami telah mewahyukan kepadamu agar engkau menegakkan hukum"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Wa anzalna ilaikal-kitaba bil-haqq berarti \"Dan Kami telah menurunkan Kitab (Al-Qur'an) kepadamu dengan membawa kebenaran\". Pilihan lain tidak sesuai arti lafaznya."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 3,
+  "tipe": "pg",
+  "tanya": "Perhatikan terjemahan potongan Q.S. Al-Maidah/5:48 berikut!\n\n\"... dan menjaganya.\"\n\nPotongan ayat yang sesuai dengan terjemahan tersebut adalah ....",
+  "opsi": [
+   "<span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">وَاَنْزَلْنَآ اِلَيْكَ الْكِتٰبَ</span>",
+   "<span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">بِالْحَقِّ</span>",
+   "<span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">مُصَدِّقًا لِّمَا بَيْنَ يَدَيْهِ مِنَ الْكِتٰبِ</span>",
+   "<span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">وَمُهَيْمِنًا عَلَيْهِ</span>"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Wa muhaiminan 'alaih berarti \"dan menjaganya\". Pilihan A berarti Kami turunkan Kitab kepadamu, B berarti dengan kebenaran, dan C berarti yang membenarkan kitab-kitab sebelumnya."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 4,
+  "tipe": "pg",
+  "tanya": "Sejak diturunkan lebih dari empat belas abad yang lalu, isi Al-Qur'an tetap terjaga tanpa perubahan. Hal ini menunjukkan aspek kebenaran Al-Qur'an dari sisi ....",
+  "opsi": [
+   "keindahan susunan bahasanya yang sulit ditandingi",
+   "keaslian dan keterpeliharaannya yang dijamin oleh Allah Swt.",
+   "banyaknya ulama yang menulis tafsirnya",
+   "jumlah surah dan ayatnya yang tersusun berurutan"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Terjaganya isi Al-Qur'an menunjukkan keaslian yang dijamin Allah Swt. (Q.S. Al-Hijr/15:9). Pilihan lain bukan aspek keaslian atau keterpeliharaan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 5,
+  "tipe": "pg",
+  "tanya": "Perhatikan lafaz-lafaz berikut!\n\n(1) <span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">مِنْ بَعْدِ</span>\n(2) <span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">مَنْ آمَنَ</span>\n(3) <span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">أَنْتُمْ</span>\n(4) <span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">مِنْ وَالٍ</span>\n\nLafaz yang mengandung hukum bacaan ikhfa' ditunjukkan oleh nomor ....",
+  "opsi": [
+   "(1)",
+   "(2)",
+   "(3)",
+   "(4)"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Pada lafaz <span dir=\"rtl\" lang=\"ar\" style=\"font-size:22px;line-height:1.9\">أَنْتُمْ</span>, nun sukun bertemu huruf ta yang termasuk huruf ikhfa', sehingga dibaca samar disertai dengung. Nomor (1) iqlab, (2) idzhar halqi, (4) idgham bighunnah."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 6,
+  "tipe": "pg",
+  "tanya": "Di sebuah desa, banyak pemuda tidak memiliki pekerjaan dan hanya menghabiskan waktu di pos ronda. Dampak negatif yang paling mungkin timbul dari pengangguran tersebut dalam kehidupan masyarakat adalah ....",
+  "opsi": [
+   "meningkatnya kemiskinan dan potensi terjadinya tindak kejahatan",
+   "bertambahnya penghasilan keluarga dari bantuan tetangga",
+   "berkembangnya semangat membuka usaha baru",
+   "meningkatnya kepedulian masyarakat terhadap waktu"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Pengangguran melemahkan ekonomi keluarga sehingga menimbulkan kemiskinan dan membuka peluang kejahatan. Pilihan lain adalah akibat positif yang tidak sesuai kondisi tersebut."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 7,
+  "tipe": "pg",
+  "tanya": "Di lingkungan tempat tinggal Dina, warga yang berbeda agama saling membantu saat ada hajatan dan tidak saling mengganggu ibadah. Hikmah utama dari penerapan sikap toleransi tersebut adalah ....",
+  "opsi": [
+   "perbedaan keyakinan hilang sehingga semua warga menjadi satu agama",
+   "setiap warga bebas mencampuradukkan tata cara ibadah",
+   "warga tidak perlu lagi mempelajari agamanya sendiri",
+   "terciptanya kerukunan dan kehidupan yang damai di tengah perbedaan"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Toleransi menciptakan kerukunan dan kedamaian dalam perbedaan tanpa mencampuradukkan akidah dan ibadah. Pilihan lain bertentangan dengan prinsip toleransi dalam Islam."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 8,
+  "tipe": "pg",
+  "tanya": "Ajaran Al-Qur'an bersifat universal. Pernyataan yang menunjukkan bukti universalitas tersebut adalah ....",
+  "opsi": [
+   "Al-Qur'an diturunkan dalam bahasa Arab yang fasih",
+   "ajarannya mencakup seluruh aspek kehidupan dan berlaku bagi semua manusia di setiap zaman dan tempat",
+   "Al-Qur'an terdiri atas 114 surah",
+   "Al-Qur'an diturunkan secara bertahap selama kurang lebih 23 tahun"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Universal berarti berlaku bagi semua manusia di setiap zaman dan tempat serta mencakup semua aspek kehidupan. Pilihan lain adalah fakta tentang Al-Qur'an, tetapi bukan bukti universalitas."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 9,
+  "tipe": "pg",
+  "tanya": "Rafi ingin mengikuti lomba karya tulis keislaman di sekolah. Namun, ia selalu berkata \"nanti saja\", takut gagal, dan merasa teman-temannya pasti lebih pintar. Akhirnya waktu pendaftaran terlewat. Faktor yang paling menghambat Rafi dalam menerapkan fastabiqul khairat adalah ....",
+  "opsi": [
+   "banyaknya pilihan kegiatan positif yang tersedia di sekolah",
+   "persaingan yang berlangsung secara sehat dan sportif",
+   "sikap suka menunda-nunda, takut gagal, dan rendah diri",
+   "dorongan untuk berbuat baik dengan tulus"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Rafi menunda-nunda, takut gagal, dan rendah diri, yaitu sikap yang menghambat semangat berlomba dalam kebaikan. Banyaknya kesempatan, persaingan sehat, dan ketulusan justru pendukung fastabiqul khairat."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 10,
+  "tipe": "pg",
+  "tanya": "Perbedaan dan keberagaman di antara manusia merupakan kehendak Allah Swt. Hikmah perbedaan tersebut dalam kehidupan beragama adalah ....",
+  "opsi": [
+   "menjadi sarana untuk berlomba-lomba dalam berbuat kebaikan",
+   "menjadi alasan untuk saling menjatuhkan",
+   "menunjukkan bahwa tidak ada kebenaran yang pasti",
+   "membuat setiap kelompok berhak memaksakan pendapatnya"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Allah Swt. menjadikan manusia beragam untuk menguji mereka agar berlomba-lomba dalam kebaikan (Q.S. Al-Maidah/5:48). Pilihan lain bertentangan dengan ajaran Islam."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 11,
+  "tipe": "pg",
+  "tanya": "Kata iman berasal dari bahasa Arab amana-yu'minu-imanan. Secara bahasa, iman berarti ....",
+  "opsi": [
+   "beramal saleh",
+   "mengucapkan kalimat syahadat",
+   "mempelajari ilmu agama",
+   "percaya atau membenarkan"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Iman secara bahasa berarti tasdiq, yaitu percaya atau membenarkan. Mengucapkan dan beramal merupakan wujud iman, bukan pengertian bahasanya."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 12,
+  "tipe": "pg",
+  "tanya": "Menurut para ulama, pengertian iman secara istilah adalah ....",
+  "opsi": [
+   "keyakinan dalam hati saja tanpa perlu diwujudkan",
+   "keyakinan dalam hati, pengakuan dengan lisan, dan pembuktian dengan perbuatan",
+   "pengakuan dengan lisan dan perbuatan tanpa keyakinan dalam hati",
+   "pengetahuan tentang rukun iman yang dihafal dengan baik"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Secara istilah, iman adalah meyakini dengan hati, mengucapkan dengan lisan, dan mengamalkan dengan anggota badan. Pilihan lain hanya memuat sebagian unsur atau tidak tepat."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 13,
+  "tipe": "pg",
+  "tanya": "Dalam hadis Jibril, Rasulullah saw. menjelaskan pokok-pokok keimanan kepada Malaikat Jibril. Jumlah rukun iman yang disebutkan dalam hadis tersebut adalah ....",
+  "opsi": [
+   "enam",
+   "lima",
+   "tujuh",
+   "sepuluh"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Rukun iman ada enam: iman kepada Allah, malaikat, kitab, rasul, hari akhir, serta qada dan qadar. Angka lima adalah jumlah rukun Islam."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 14,
+  "tipe": "pg",
+  "tanya": "Perintah untuk beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya, rasul-rasul-Nya, dan hari kemudian terdapat dalam ayat ....",
+  "opsi": [
+   "Q.S. Al-Ikhlas/112:1–4",
+   "Q.S. Al-'Asr/103:1–3",
+   "Q.S. An-Nisa'/4:136",
+   "Q.S. Al-Kafirun/109:1–6"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Q.S. An-Nisa'/4:136 memerintahkan beriman kepada Allah, Rasul-Nya, kitab, malaikat, rasul-rasul, dan hari kemudian. Ayat pada pilihan lain membahas tauhid, iman dan amal saleh, serta toleransi."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 15,
+  "tipe": "pg",
+  "tanya": "Hadis Nabi Muhammad saw. menyebutkan bahwa iman memiliki banyak cabang. Pengertian syu'abul iman adalah ....",
+  "opsi": [
+   "rukun-rukun iman yang wajib diyakini dalam hati",
+   "cabang-cabang iman yang tampak dalam keyakinan, ucapan, dan perbuatan",
+   "golongan manusia yang telah beriman kepada Allah Swt.",
+   "tingkatan ilmu yang dimiliki seorang mukmin"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Syu'abul iman berarti cabang-cabang iman yang tampak dalam keyakinan hati, ucapan lisan, dan perbuatan. Rukun iman adalah pokok keyakinan, bukan cabang."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 16,
+  "tipe": "pg",
+  "tanya": "Hadis riwayat Muslim menyebutkan bahwa iman memiliki banyak cabang. Cabang yang paling utama adalah ucapan lā ilāha illallāh dan yang paling rendah adalah menyingkirkan gangguan dari jalan. Jumlah cabang iman yang disebutkan dalam hadis tersebut adalah ....",
+  "opsi": [
+   "sepuluh cabang",
+   "tiga puluh tiga cabang",
+   "sembilan puluh sembilan cabang",
+   "tujuh puluh sekian (lebih dari tujuh puluh) cabang"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Hadis riwayat Muslim menyebut iman memiliki \"tujuh puluh sekian\" cabang. Sebagian ulama merincinya menjadi 77 cabang."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 17,
+  "tipe": "pg",
+  "tanya": "Rina ingin meningkatkan keimanannya melalui ucapan lisan. Di antara amalan berikut, yang bukan termasuk cabang iman melalui lisan adalah ....",
+  "opsi": [
+   "menyingkirkan duri dari jalan",
+   "membaca Al-Qur'an",
+   "berzikir kepada Allah Swt.",
+   "berdoa kepada Allah Swt."
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Menyingkirkan duri dari jalan adalah cabang iman melalui perbuatan, bukan lisan. Membaca Al-Qur'an, berzikir, dan berdoa dilakukan dengan lisan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 18,
+  "tipe": "pg",
+  "tanya": "Keimanan seorang muslim mencakup tiga dimensi utama. Unsur berikut yang bukan termasuk dimensi keimanan adalah ....",
+  "opsi": [
+   "keyakinan dalam hati (i'tiqad)",
+   "pengakuan dengan lisan (iqrar)",
+   "kepemilikan harta yang melimpah",
+   "pembuktian dengan perbuatan (amal)"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Tiga dimensi iman adalah i'tiqad (hati), iqrar (lisan), dan amal (perbuatan). Harta yang melimpah bukan dimensi keimanan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 19,
+  "tipe": "pg",
+  "tanya": "Seorang siswa berkata, \"Saya beriman kepada Allah, malaikat, kitab, rasul, dan hari akhir, tetapi saya tidak perlu percaya pada qada dan qadar.\" Agar imannya sempurna, jumlah rukun iman yang wajib diyakini seluruhnya oleh umat Islam adalah ....",
+  "opsi": [
+   "lima",
+   "tujuh",
+   "empat",
+   "enam"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Rukun iman wajib diyakini seluruhnya, yaitu enam. Siswa tersebut belum mengimani qada dan qadar sehingga keimanannya belum sempurna."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 20,
+  "tipe": "pg",
+  "tanya": "Sebagian cabang iman diwujudkan melalui perbuatan anggota badan. Amalan yang bukan termasuk syu'abul iman ranah perbuatan adalah ....",
+  "opsi": [
+   "memuliakan tamu",
+   "membelanjakan harta secara berlebihan (israf)",
+   "menyantuni anak yatim",
+   "menjenguk orang sakit"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Israf adalah perilaku tercela dan bukan cabang iman. Memuliakan tamu, menyantuni anak yatim, dan menjenguk orang sakit merupakan cabang iman dalam bentuk perbuatan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 21,
+  "tipe": "pg",
+  "tanya": "Pak Hasan beriman secara kaffah: ia meyakini seluruh rukun iman, menjalankan ibadah dengan tertib, dan berakhlak baik dalam bermasyarakat. Hikmah yang paling tepat dari keimanannya tersebut bagi kehidupannya adalah ....",
+  "opsi": [
+   "hidupnya selalu terbebas dari segala ujian",
+   "dirinya dijamin mendapat kekayaan di dunia",
+   "hidupnya lebih tenang, terarah, dan terdorong untuk berbuat baik",
+   "dirinya tidak perlu lagi bergaul dengan orang yang berbeda keyakinan"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Iman yang kaffah (menyeluruh) menghadirkan ketenangan, arah hidup yang jelas, dan dorongan berbuat baik. Iman tidak menjamin bebas dari ujian atau kekayaan, dan tidak melarang bergaul dengan orang lain."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 22,
+  "tipe": "pg",
+  "tanya": "Perhatikan perilaku berikut dalam hal berpakaian dan berpenampilan! Perilaku yang merupakan contoh tabzir dan israf dalam penampilan adalah ....",
+  "opsi": [
+   "membeli pakaian dan aksesori baru setiap pekan demi mengikuti tren, padahal yang lama masih layak pakai",
+   "membeli seragam baru karena seragam lama sudah sempit",
+   "memakai pakaian sederhana yang bersih dan rapi",
+   "menjahit pakaian yang sobek agar dapat dipakai kembali"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Membeli pakaian dan aksesori terus-menerus hanya mengikuti tren, padahal yang lama masih layak, adalah israf dan tabzir dalam penampilan. Pilihan lain sesuai kebutuhan atau hemat."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 23,
+  "tipe": "pg",
+  "tanya": "Perhatikan beberapa cara menggunakan harta berikut! Cara yang tidak sesuai dengan ajaran Islam adalah ....",
+  "opsi": [
+   "membayar zakat dan berinfak",
+   "menggunakan uang untuk berjudi daring dengan harapan cepat kaya",
+   "menabung untuk kebutuhan biaya pendidikan",
+   "membeli kebutuhan pokok sesuai kemampuan"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Berjudi adalah perbuatan haram dan menyia-nyiakan harta. Zakat, infak, menabung untuk pendidikan, dan membeli kebutuhan pokok sesuai kemampuan sesuai tuntunan Islam."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 24,
+  "tipe": "pg",
+  "tanya": "Bu Ratna mengadakan syukuran kelulusan anaknya dengan memesan makanan untuk 500 orang, padahal tamu yang hadir hanya 100 orang. Banyak makanan yang akhirnya terbuang. Perilaku Bu Ratna termasuk ....",
+  "opsi": [
+   "ta'awun (tolong-menolong)",
+   "qana'ah (merasa cukup)",
+   "sum'ah (memperdengarkan amal)",
+   "israf (berlebih-lebihan)"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Memesan makanan jauh melebihi kebutuhan sehingga banyak yang terbuang adalah israf (berlebih-lebihan). Ta'awun adalah tolong-menolong, qana'ah adalah merasa cukup, sum'ah adalah memperdengarkan amal."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 25,
+  "tipe": "pg",
+  "tanya": "Riya' termasuk penyakit hati yang dapat merusak pahala ibadah. Pengertian riya' dalam beribadah adalah ....",
+  "opsi": [
+   "beribadah dengan niat mengharap rida Allah Swt.",
+   "merasa bangga dan puas diri karena telah beribadah dengan baik",
+   "beribadah dengan memperlihatkan amal kepada orang lain agar mendapat pujian",
+   "menunda ibadah karena kesibukan duniawi"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Riya' adalah beribadah dengan memperlihatkan amal agar dipuji orang lain. Pilihan A adalah ikhlas, sedangkan B lebih dekat dengan ujub."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 26,
+  "tipe": "pg",
+  "tanya": "Hidup berfoya-foya membawa banyak akibat bagi diri sendiri dan lingkungan. Pernyataan berikut yang bukan merupakan dampak negatif dari perilaku tersebut adalah ....",
+  "opsi": [
+   "tumbuhnya kebiasaan menabung dan perencanaan keuangan yang baik",
+   "terjerat utang akibat pengeluaran melebihi kemampuan",
+   "mudah tergoda untuk melakukan perbuatan maksiat",
+   "hilangnya kepedulian terhadap sesama yang membutuhkan"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Kebiasaan menabung dan perencanaan keuangan yang baik adalah hasil hidup hemat, bukan akibat berfoya-foya. Pilihan lain adalah dampak negatif."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 27,
+  "tipe": "pg",
+  "tanya": "Seorang pengusaha muda rutin membelanjakan hartanya untuk barang-barang mewah yang tidak dibutuhkan, sementara tetangga dan kerabat dekatnya hidup kekurangan dan ia tidak pernah membantu. Berdasarkan Q.S. Al-Isra'/17:26–27, kesimpulan yang tepat tentang sikap pengusaha tersebut adalah ....",
+  "opsi": [
+   "boleh dilakukan selama hartanya diperoleh dengan cara yang halal",
+   "menyalahi tuntunan ayat karena menghambur-hamburkan harta dan mengabaikan hak kerabat dan orang miskin, sedangkan pemboros disebut saudara setan",
+   "benar karena harta adalah hak penuh pemiliknya tanpa tanggung jawab sosial",
+   "tidak berkaitan dengan ayat tersebut karena ayat itu hanya berlaku bagi orang miskin"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Q.S. Al-Isra'/17:26–27 memerintahkan memberikan hak kerabat, orang miskin, dan musafir, serta melarang pemborosan; para pemboros adalah saudara setan. Sikap pengusaha tersebut menyalahi ayat itu."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 28,
+  "tipe": "pg",
+  "tanya": "Perhatikan upaya-upaya berikut! Upaya yang bukan termasuk cara menghindari hidup berfoya-foya adalah ....",
+  "opsi": [
+   "membuat daftar kebutuhan sebelum berbelanja",
+   "membedakan antara kebutuhan dan keinginan",
+   "bersyukur atas rezeki dan hidup sederhana",
+   "membeli barang yang sedang tren agar tidak dianggap ketinggalan zaman"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Membeli barang hanya karena tren adalah ciri hidup berfoya-foya. Pilihan lain adalah cara menghindarinya."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 29,
+  "tipe": "pg",
+  "tanya": "Riya' sering disebut sebagai syirik khafi. Pengertian syirik khafi yang berkaitan dengan perilaku riya' adalah ....",
+  "opsi": [
+   "perbuatan menyekutukan Allah secara tersembunyi dan halus, seperti beramal karena ingin dipuji manusia",
+   "menyembah patung atau benda secara terang-terangan",
+   "mengingkari keberadaan Allah Swt. sepenuhnya",
+   "meninggalkan ibadah karena merasa diri sudah cukup saleh"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Syirik khafi adalah syirik tersembunyi, yaitu beramal karena ingin dipuji manusia sehingga keikhlasan kepada Allah Swt. terganggu. Pilihan B dan C adalah bentuk syirik yang nyata."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 30,
+  "tipe": "pg",
+  "tanya": "Pengertian sum'ah yang membedakannya dari riya' adalah ....",
+  "opsi": [
+   "memperlihatkan amal secara langsung agar dilihat orang lain",
+   "membanggakan diri atas kemampuan yang dimiliki",
+   "memperdengarkan atau menceritakan amal yang telah dilakukan agar mendapat pujian",
+   "menolak kebenaran dan meremehkan orang lain"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Sum'ah adalah memperdengarkan atau menceritakan amal yang telah dilakukan agar dipuji. Riya' memperlihatkan amal, ujub adalah bangga diri, takabur adalah menolak kebenaran dan meremehkan orang lain."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 31,
+  "tipe": "pg",
+  "tanya": "Dalam ekonomi Islam, setiap transaksi harus bebas dari unsur yang dilarang syariat. Transaksi yang dilarang dalam ekonomi Islam adalah ....",
+  "opsi": [
+   "jual beli barang dengan harga yang disepakati kedua pihak",
+   "pinjaman uang dengan tambahan bunga yang disyaratkan sejak awal",
+   "sewa-menyewa gedung dengan imbalan yang jelas",
+   "kerja sama usaha dengan pembagian keuntungan sesuai kesepakatan"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Pinjaman dengan tambahan bunga yang disyaratkan di awal adalah riba yang dilarang. Jual beli, sewa-menyewa, dan bagi hasil dengan kesepakatan adalah transaksi yang dibolehkan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 32,
+  "tipe": "pg",
+  "tanya": "Takaful merupakan sebutan untuk asuransi syariah. Pengertian takaful berdasarkan prinsip tolong-menolong dan ketentuan syariah adalah ....",
+  "opsi": [
+   "kesepakatan menjual risiko kepada perusahaan dengan keuntungan hanya untuk perusahaan",
+   "pinjaman uang dari perusahaan kepada peserta dengan bunga tetap",
+   "tabungan pribadi yang hanya dapat dicairkan oleh pemiliknya",
+   "usaha saling melindungi dan tolong-menolong antarpeserta melalui dana tabarru' yang sesuai syariah"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Takaful berarti saling menanggung atau melindungi melalui dana tabarru' (dana kebajikan) yang dikelola sesuai syariah. Pilihan lain tidak sesuai prinsip tolong-menolong."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 33,
+  "tipe": "pg",
+  "tanya": "Asuransi syariah memberi banyak manfaat bagi masyarakat. Pernyataan berikut yang bukan manfaat asuransi syariah adalah ....",
+  "opsi": [
+   "memberi perlindungan terhadap risiko musibah",
+   "menumbuhkan semangat saling tolong-menolong",
+   "memperoleh keuntungan berlipat melalui undian yang bersifat untung-untungan",
+   "membantu peserta dan keluarganya menghadapi kerugian secara adil"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Undian untung-untungan termasuk maisir (judi) yang dilarang. Asuransi syariah bermanfaat sebagai perlindungan risiko, mempererat tolong-menolong, dan meringankan kerugian peserta."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 34,
+  "tipe": "pg",
+  "tanya": "Bank syariah menggunakan berbagai akad dalam kegiatannya. Unsur yang bukan merupakan akad dalam perbankan syariah adalah ....",
+  "opsi": [
+   "riba (bunga)",
+   "wadiah",
+   "mudharabah",
+   "murabahah"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Riba (bunga) adalah praktik terlarang, bukan akad. Wadiah (titipan), mudharabah (bagi hasil), dan murabahah (jual beli dengan margin) adalah akad perbankan syariah."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 35,
+  "tipe": "pg",
+  "tanya": "Bu Siti menyimpan uangnya di bank syariah agar aman. Uang itu boleh ia ambil kapan saja, bank menjamin pengembaliannya tanpa menjanjikan imbalan, tetapi boleh memberi bonus secara sukarela. Akad yang digunakan Bu Siti adalah ....",
+  "opsi": [
+   "mudharabah",
+   "wadiah",
+   "murabahah",
+   "ijarah"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Wadiah adalah akad penitipan uang yang dapat diambil kapan saja, dengan bonus bersifat sukarela. Mudharabah adalah bagi hasil, murabahah jual beli, ijarah sewa."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 36,
+  "tipe": "pg",
+  "tanya": "Pak Budi menyerahkan modal Rp50.000.000,00 kepada Bu Dewi untuk usaha kuliner. Bu Dewi mengelola usaha tersebut, dan keuntungannya dibagi sesuai nisbah yang disepakati. Dalam akad mudharabah tersebut, Bu Dewi berkedudukan sebagai ....",
+  "opsi": [
+   "shahibul maal",
+   "mustajir",
+   "muwadi'",
+   "mudharib"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Pengelola modal dalam mudharabah disebut mudharib, sedangkan pemilik modal adalah shahibul maal. Bu Dewi mengelola usaha, sehingga ia adalah mudharib."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 37,
+  "tipe": "pg",
+  "tanya": "Bank syariah memiliki banyak manfaat bagi masyarakat. Pernyataan berikut yang bukan manfaat bank syariah adalah ....",
+  "opsi": [
+   "memberikan keuntungan tetap yang pasti kepada nasabah tanpa memperhatikan hasil usaha",
+   "menghindarkan masyarakat dari transaksi yang mengandung riba",
+   "mendorong pemerataan ekonomi melalui sistem bagi hasil yang adil",
+   "menyediakan layanan keuangan sesuai prinsip syariah"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Bank syariah memakai sistem bagi hasil, sehingga imbalan tidak dapat dijamin tetap tanpa memperhatikan hasil usaha. Pilihan lain adalah manfaat bank syariah."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 38,
+  "tipe": "pg",
+  "tanya": "Pada lambang koperasi Indonesia terdapat gambar timbangan. Makna filosofis lambang timbangan tersebut adalah ....",
+  "opsi": [
+   "kemakmuran anggota",
+   "persatuan dan kekeluargaan",
+   "keadilan sosial",
+   "kepribadian bangsa Indonesia"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Timbangan pada lambang koperasi melambangkan keadilan sosial. Padi dan kapas melambangkan kemakmuran, rantai melambangkan persatuan, pohon beringin melambangkan kepribadian bangsa."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 39,
+  "tipe": "pg",
+  "tanya": "Bank syariah menjalankan kegiatan operasionalnya tanpa bunga. Tiga kegiatan utama bank syariah adalah ....",
+  "opsi": [
+   "mengumpulkan dana, menetapkan bunga, dan memberi hadiah",
+   "menghimpun dana, menyalurkan zakat, dan mencetak uang",
+   "menyalurkan dana, memproduksi barang, dan mengelola pajak",
+   "menghimpun dana, menyalurkan dana, dan memberikan pelayanan jasa"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Tiga kegiatan utama bank syariah adalah menghimpun dana (funding), menyalurkan dana (financing), dan memberikan pelayanan jasa (service). Pilihan lain mencampurkan kegiatan yang tidak sesuai."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 40,
+  "tipe": "pg",
+  "tanya": "Asuransi syariah dibangun atas prinsip ta'awun (tolong-menolong). Ayat Al-Qur'an yang menjadi landasan prinsip tersebut adalah ....",
+  "opsi": [
+   "Q.S. Al-Baqarah/2:275 yang menghalalkan jual beli dan mengharamkan riba",
+   "Q.S. Al-Maidah/5:2 yang memerintahkan tolong-menolong dalam kebaikan dan takwa",
+   "Q.S. Al-Hujurat/49:13 yang menjelaskan manusia diciptakan berbangsa-bangsa dan bersuku-suku",
+   "Q.S. Al-Isra'/17:27 yang menyebut para pemboros sebagai saudara setan"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Q.S. Al-Maidah/5:2 memerintahkan tolong-menolong dalam kebaikan dan takwa, yang menjadi dasar ta'awun dalam asuransi syariah. Ayat lain membahas jual beli dan riba, keberagaman manusia, dan pemborosan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 41,
+  "tipe": "pg",
+  "tanya": "Seorang sejarawan berpendapat bahwa Islam masuk ke Nusantara pada abad ke-13 M dibawa oleh pedagang dari India. Salah satu buktinya adalah batu nisan di Pasai yang bercorak khas Gujarat. Pendapat tersebut dikenal sebagai teori ....",
+  "opsi": [
+   "Mekah",
+   "Persia",
+   "Gujarat",
+   "Cina"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Pendapat bahwa Islam dibawa pedagang India (Gujarat) pada abad ke-13 dengan bukti nisan bercorak Gujarat dikenal sebagai teori Gujarat. Teori Mekah menyebut abad ke-7 dari Arab, teori Persia menekankan kesamaan budaya, teori Cina menekankan peran pedagang dan migran Cina."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 42,
+  "tipe": "pg",
+  "tanya": "Berdasarkan materi sejarah Islam di Nusantara pada pelajaran PAI, kerajaan Islam pertama yang berdiri di Nusantara adalah ....",
+  "opsi": [
+   "Samudra Pasai",
+   "Demak",
+   "Mataram Islam",
+   "Banten"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Menurut materi sejarah Islam yang umum dipelajari di PAI, Samudra Pasai adalah kerajaan Islam pertama di Nusantara. Demak, Mataram Islam, dan Banten berdiri lebih kemudian."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 43,
+  "tipe": "pg",
+  "tanya": "Pada abad ke-13 di sebuah pelabuhan Sumatra, para pedagang muslim berdagang dengan jujur, menikah dengan penduduk setempat, dan mengajarkan bahwa semua manusia sama derajatnya di hadapan Allah Swt. Banyak penduduk, termasuk dari golongan bawah, tertarik memeluk Islam. Dari kasus tersebut, faktor yang paling mempercepat penyebaran Islam di Nusantara adalah ....",
+  "opsi": [
+   "penaklukan militer terhadap kerajaan Hindu-Buddha",
+   "ajaran Islam yang sederhana dan menjunjung kesetaraan, serta pendekatan damai melalui perdagangan dan pernikahan",
+   "kewajiban membayar pajak khusus bagi penganut agama lain",
+   "larangan bagi masyarakat untuk memeluk agama lain"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Pedagang yang jujur, pernikahan dengan penduduk, dan ajaran kesetaraan membuat Islam diterima secara damai. Penaklukan, pajak khusus, atau larangan agama lain tidak tergambar dalam kasus ini."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 44,
+  "tipe": "pg",
+  "tanya": "Pada tahap awal kedatangannya, para pedagang muslim singgah di pelabuhan-pelabuhan Nusantara untuk berniaga. Jalur awal masuknya Islam ke Nusantara melalui ....",
+  "opsi": [
+   "penaklukan militer",
+   "lembaga pendidikan pesantren",
+   "pementasan seni wayang",
+   "perdagangan"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Pada tahap awal, Islam masuk melalui perdagangan di pelabuhan Nusantara. Pesantren dan seni wayang berkembang pada masa berikutnya, dan penaklukan militer bukan jalur awal."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 45,
+  "tipe": "pg",
+  "tanya": "Seorang tokoh pada masa mudanya bernama Merah Silu. Setelah memeluk Islam, ia memimpin Samudra Pasai dan wafat sekitar tahun 1297 M. Tokoh yang dimaksud adalah ....",
+  "opsi": [
+   "Sultan Iskandar Muda",
+   "Raden Patah",
+   "Sultan Malik Al-Saleh",
+   "Sultan Hasanuddin"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Merah Silu adalah nama kecil Sultan Malik Al-Saleh, pemimpin Samudra Pasai, yang wafat sekitar tahun 1297 M. Tokoh lain berasal dari kerajaan atau masa yang berbeda."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 46,
+  "tipe": "pg",
+  "tanya": "Seorang sultan di sebuah kerajaan Islam membangun masjid, mengundang ulama dari berbagai negeri ke istananya, dan menjamin keamanan para dai. Beberapa dekade kemudian, kerajaan itu menjadi pusat pendidikan Islam di kawasannya. Kesimpulan yang tepat dari ilustrasi tersebut adalah ....",
+  "opsi": [
+   "kepedulian dan dukungan pemimpin terhadap dakwah mempercepat penyebaran dan kemajuan Islam di wilayahnya",
+   "dakwah hanya berhasil jika dilakukan oleh penguasa tanpa peran ulama",
+   "penyebaran Islam bergantung sepenuhnya pada kekuatan militer kerajaan",
+   "peran pemimpin tidak berpengaruh karena Islam menyebar dengan sendirinya"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Sultan yang membangun masjid, mengundang ulama, dan menjamin keamanan dai membuat kerajaannya menjadi pusat pendidikan Islam. Jadi kepedulian dan dukungan pemimpin mempercepat penyebaran Islam."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ },
+ {
+  "no": 47,
+  "tipe": "pg",
+  "tanya": "Para wali menggunakan gamelan, tembang, dan wayang untuk memperkenalkan Islam kepada masyarakat Jawa. Karakteristik dakwah Wali Songo melalui pendekatan budaya tersebut adalah ....",
+  "opsi": [
+   "menghapus seluruh tradisi lokal agar masyarakat segera meninggalkan kebiasaan lama",
+   "membatasi dakwah hanya pada kalangan bangsawan",
+   "menggunakan tekanan politik terhadap penguasa setempat",
+   "memadukan nilai-nilai Islam ke dalam budaya setempat secara damai"
+  ],
+  "jawaban": "D",
+  "pembahasan": [
+   "Wali Songo memadukan nilai Islam dengan budaya setempat (gamelan, tembang, wayang) secara damai, tanpa menghapus tradisi secara paksa dan tanpa tekanan politik."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: D"
+ },
+ {
+  "no": 48,
+  "tipe": "pg",
+  "tanya": "Salah seorang anggota Wali Songo berdakwah dengan menjadikan wayang kulit sebagai media, dengan lakon-lakon yang sarat nilai Islam. Wali tersebut adalah ....",
+  "opsi": [
+   "Sunan Gresik",
+   "Sunan Kalijaga",
+   "Sunan Ampel",
+   "Sunan Giri"
+  ],
+  "jawaban": "B",
+  "pembahasan": [
+   "Sunan Kalijaga dikenal berdakwah melalui wayang kulit. Sunan Gresik dikenal sebagai pedagang dan tabib, Sunan Ampel mendirikan pesantren, Sunan Giri dikenal lewat pendidikan."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: B"
+ },
+ {
+  "no": 49,
+  "tipe": "pg",
+  "tanya": "Perhatikan metode dakwah yang diajarkan dalam Q.S. An-Nahl/16:125! Metode dakwah yang sesuai dengan kandungan ayat tersebut adalah ....",
+  "opsi": [
+   "dengan paksaan dan tekanan agar mad'u segera mengikuti",
+   "dengan ancaman hukuman bagi yang menolak",
+   "dengan hikmah (kebijaksanaan), nasihat yang baik, dan berdiskusi dengan cara yang lebih baik",
+   "dengan mencari kesalahan lawan bicara agar mereka merasa malu"
+  ],
+  "jawaban": "C",
+  "pembahasan": [
+   "Q.S. An-Nahl/16:125 mengajarkan dakwah dengan hikmah, nasihat yang baik, dan berdiskusi dengan cara yang lebih baik. Paksaan, ancaman, dan mencari kesalahan lawan bicara bertentangan dengan ayat tersebut."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: C"
+ },
+ {
+  "no": 50,
+  "tipe": "pg",
+  "tanya": "Saat berdakwah di Thaif, Nabi Muhammad saw. dilempari batu oleh penduduk, tetapi beliau tetap sabar dan mendoakan mereka. Hikmah kesabaran dalam menghadapi ujian dan cobaan selama berdakwah seperti itu adalah ....",
+  "opsi": [
+   "dakwah tetap berlanjut, hati orang lain lebih mudah tersentuh, dan pelakunya mendapat pahala dari Allah Swt.",
+   "pendakwah terbebas dari semua gangguan",
+   "orang yang menentang dakwah pasti langsung memeluk Islam",
+   "pendakwah boleh menghentikan dakwahnya karena sudah cukup berjuang"
+  ],
+  "jawaban": "A",
+  "pembahasan": [
+   "Kesabaran Nabi Muhammad saw. di Thaif membuat dakwah tetap berlanjut, melembutkan hati orang lain, dan mendatangkan pahala. Sabar tidak berarti bebas dari ujian, dan tidak menjamin penentang langsung beriman."
+  ],
+  "jawabanFinal": "✅ Kunci jawaban: A"
+ }
+];
+
+
+// CBT CORE: pemulihan state, navigator, navigasi, progres, dan timer.
+function buildNavigator() {
+  const grid = document.getElementById('nav-grid');
+  if (!grid) throw new Error('Elemen navigator soal tidak ditemukan.');
+  grid.innerHTML = soalData.map((s, i) =>
+    `<button type="button" class="nav-btn" id="nav-${i}" onclick="goTo(${i})" aria-label="Buka soal ${s.no}">${s.no}</button>`
+  ).join('');
+}
+
+function updateNavigator() {
+  const answered = soalData.filter((s, i) => isAnswered(s, answers[i])).length;
+  const count = document.getElementById('answered-count');
+  const progressText = document.getElementById('progress-text');
+  const fill = document.getElementById('progress-fill');
+  if (count) count.textContent = `${answered} dijawab`;
+  if (progressText) progressText.textContent = `Soal ${current + 1} dari ${soalData.length}`;
+  if (fill) fill.style.width = `${((current + 1) / soalData.length) * 100}%`;
+
+  soalData.forEach((s, i) => {
+    const btn = document.getElementById(`nav-${i}`);
+    if (!btn) return;
+    btn.classList.toggle('active', i === current);
+    btn.classList.toggle('answered', isAnswered(s, answers[i]));
+  });
+}
+
+function goTo(index) {
+  if (submitted || !Number.isInteger(index) || index < 0 || index >= soalData.length) return;
+  current = index;
+  renderSoal();
+  updateNavigator();
+}
+
+function startTimer() {
+  const timer = document.getElementById('timer');
+  if (timerInterval) clearInterval(timerInterval);
+  const paint = () => {
+    const mins = Math.floor(timeLeft / 60);
+    const secs = timeLeft % 60;
+    if (timer) {
+      timer.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      timer.classList.toggle('urgent', timeLeft <= 60);
+    }
+    if (timeLeft <= 0 && !submitted) {
+      clearInterval(timerInterval);
+      alert('Waktu latihan telah habis. Jawaban akan dikumpulkan otomatis.');
+      submitAll();
+    }
+  };
+  paint();
+  timerInterval = setInterval(() => {
+    if (submitted) return clearInterval(timerInterval);
+    timeLeft = Math.max(0, timeLeft - 1);
+    paint();
+  }, 1000);
+}
+
+
+function renderSoal() {
+  const area = document.getElementById('soal-area');
+  if (area) area.style.display = 'block';
+  const s = soalData[current];
+  const card = document.getElementById('soal-card');
+  const teks = null;
+  const tipeBadge = {pg:'🔵 Pilihan Ganda'};
+  const tipeClass = {pg:'tipe-pg'};
+
+  let html = `<div class="soal-meta">
+    <span class="soal-num">No. ${s.no}</span>
+    <span class="tipe-badge ${tipeClass[s.tipe]}">${tipeBadge[s.tipe]}</span>
+  </div>`;
+
+  if(teks) {
+    html += `<div class="teks-box">
+      <div style="font-size:10px;color:#059669;font-weight:700;margin-bottom:6px">${teks.label}</div>
+      ${teks.isi}
+    </div>`;
+  }
+
+  if(s.instruksi) html += `<div class="instruksi">⚠️ ${s.instruksi}</div>`;
+  if(s.tanya) html += `<div class="pertanyaan">${s.tanya.replace(/\n/g,'<br>')}</div>`;
+
+  const labels=['A','B','C','D'];
+  html += `<div class="options">`;
+  s.opsi.forEach((o,i) => {
+    const lbl=labels[i], sel=answers[current]===lbl;
+    html += `<button class="option-btn ${sel?'selected':''} ${submitted?'disabled':''}" onclick="selectPG('${lbl}')">
+      <span class="opt-label">${lbl}</span><span>${o}</span></button>`;
+  });
+  html += `</div>`;
+
+  // Pembahasan baru ditampilkan setelah peserta mengumpulkan seluruh jawaban.
+  card.innerHTML = html;
+
+  const actions = document.getElementById('actions');
+  let actHtml = '';
+  if(!submitted) {
+    actHtml += `<button class="btn btn-outline" onclick="goTo(${Math.max(0,current-1)})" ${current===0?'disabled':''}>← Sebelumnya</button>`;
+    actHtml += `<button class="btn btn-primary" onclick="goTo(${Math.min(soalData.length-1,current+1)})" ${current===soalData.length-1?'disabled':''}>Selanjutnya →</button>`;
+    actHtml += `<button class="btn btn-accent" onclick="confirmSubmit()" style="margin-left:auto">🏁 Kumpulkan</button>`;
+  } else {
+    actHtml += `<button class="btn btn-outline" onclick="goTo(${Math.max(0,current-1)})" ${current===0?'disabled':''}>← Sebelumnya</button>`;
+    actHtml += `<button class="btn btn-primary" onclick="goTo(${Math.min(soalData.length-1,current+1)})" ${current===soalData.length-1?'disabled':''}>Selanjutnya →</button>`;
+  }
+  actions.innerHTML = actHtml;
+}
+
+function renderPembahasan(s, answer) {
+  const tepat = isCorrect(s, answer);
+  let html = `<div class="pembahasan show"><div class="pemb-header">💡 Pembahasan &amp; Kunci Jawaban</div>`;
+  html += `<div class="jawaban-final" style="background:${tepat?'#dcfce7':'#fee2e2'};color:${tepat?'#065f46':'#991b1b'};border-color:${tepat?'#86efac':'#fca5a5'}">
+    ${tepat?'✅ Jawaban kamu tepat!':'❌ Jawaban kamu belum tepat.'} ${s.jawabanFinal}
+  </div>`;
+  if(s.pembahasan) s.pembahasan.forEach(l => { html += `<div class="step">${l}</div>`; });
+  if(!submitted) html += `<div style="font-size:11px;color:var(--muted);margin-top:8px">Kamu masih bisa mengubah pilihan jawaban sebelum menekan tombol Kumpulkan.</div>`;
+  html += `</div>`;
+  return html;
+}
+
+// ═══════════════════════════════════════════════════════
+// ANSWER SELECTION
+// ═══════════════════════════════════════════════════════
+function selectPG(lbl) {
+  if(submitted) return;
+  answers[current] = lbl;
+  updateNavigator(); renderSoal();
+}
+
+// ═══════════════════════════════════════════════════════
+// SUBMIT & SCORE
+// ═══════════════════════════════════════════════════════
+function confirmSubmit() {
+  const done = soalData.filter((s,i)=>isAnswered(s,answers[i])).length;
+  const unanswered = soalData.length - done;
+  if(unanswered>0 && !confirm(`Masih ada ${unanswered} soal yang belum dijawab.\nYakin ingin mengumpulkan?`)) return;
+  submitAll();
+}
+
+function isAnswered(s, a) {
+  if(!a) return false;
+  if(s.tipe==='pg') return typeof a === 'string';
+  if(s.tipe==='pgk') return Array.isArray(a) && a.length > 0;
+  if(s.tipe==='bs') return s.pernyataan.every(p => a[p.label]);
+  return false;
+}
+function isCorrect(s, a) {
+  if(!isAnswered(s,a)) return false;
+  if(s.tipe==='pg') return a === s.jawaban;
+  if(s.tipe==='pgk') { const sort=arr=>[...arr].sort().join(','); return sort(a)===sort(s.jawaban); }
+  if(s.tipe==='bs') return s.pernyataan.every(p => a[p.label] === p.jawaban);
+  return false;
+}
+function calculateScore() {
+  let correct=0, skip=0, wrong=0;
+  soalData.forEach((s,i) => {
+    const a=answers[i];
+    if(!isAnswered(s,a)) skip++;
+    else if(isCorrect(s,a)) correct++;
+    else wrong++;
+  });
+  return {correct, wrong, skip};
+}
+
+// ═══════════════════════════════════════════════════════
+// DONUT CHART – Canvas-based, mobile-safe, perfectly centered
+// ═══════════════════════════════════════════════════════
+function drawDonut(canvasId, correct, wrong, skip, total, score) {
+  const canvas = document.getElementById(canvasId);
+  if(!canvas) return;
+  const dpr = window.devicePixelRatio || 1;
+  const size = canvas.offsetWidth;
+  canvas.width = size * dpr;
+  canvas.height = size * dpr;
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+
+  const cx = size / 2, cy = size / 2;
+  const r = size * 0.36;
+  const lineW = size * 0.13;
+
+  // Data segments: [value, color]
+  const segs = [
+    [correct, '#059669'],
+    [wrong,   '#ef4444'],
+    [skip,    '#cbd5e1']
+  ].filter(s => s[0] > 0);
+
+  const tau = 2 * Math.PI;
+  let startAngle = -Math.PI / 2; // start at top
+
+  if(segs.length === 0) {
+    // All zero — draw grey ring
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, 0, tau);
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = lineW;
+    ctx.stroke();
+  } else {
+    segs.forEach(([val, color]) => {
+      const sweep = (val / total) * tau;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, startAngle, startAngle + sweep);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = lineW;
+      ctx.lineCap = 'butt';
+      ctx.stroke();
+      startAngle += sweep;
+    });
+  }
+
+  // Center text
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillStyle = '#0d1b3e';
+  ctx.font = `800 ${size*0.17}px 'JetBrains Mono', monospace`;
+  ctx.fillText(score, cx, cy - size*0.04);
+  ctx.font = `600 ${size*0.08}px 'Plus Jakarta Sans', sans-serif`;
+  ctx.fillStyle = '#64748b';
+  ctx.fillText('/ 100', cx, cy + size*0.09);
+}
+
+// ═══════════════════════════════════════════════════════
+// SUBMIT ALL
+// ═══════════════════════════════════════════════════════
+function submitAll() {
+  clearInterval(timerInterval);
+  submitted = true;
+  examActive = false; // Hentikan lock setelah selesai
+  document.getElementById('soal-area').style.display='none';
+  document.getElementById('nav-grid').parentElement.style.display='none';
+  document.getElementById('lock-badge').style.display='none';
+
+  const {correct,wrong,skip} = calculateScore();
+  const score = Math.round((correct/soalData.length)*100);
+
+  let emoji,predikat,pc;
+  if(score>=90){emoji='🏆';predikat='Luar Biasa!';pc='#065f46';}
+  else if(score>=75){emoji='🌟';predikat='Sangat Bagus!';pc='#1d4ed8';}
+  else if(score>=60){emoji='👍';predikat='Cukup Baik';pc='#b45309';}
+  else if(score>=40){emoji='📚';predikat='Perlu Belajar Lagi';pc='#dc2626';}
+  else{emoji='💪';predikat='Jangan Menyerah!';pc='#7c3aed';}
+
+  const rs = document.getElementById('result-screen');
+  rs.style.display='block';
+  rs.innerHTML = `
+    <div class="result-emoji">${emoji}</div>
+    <div class="result-title">Latihan Selesai!</div>
+    <div class="result-sub">PAS Pendidikan Agama Islam Kelas X – 50 Soal Pilihan Ganda</div>
+    <div style="max-width:650px;margin:0 auto 20px;padding:12px 16px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;color:#1e40af;font-size:13px;line-height:1.6">
+      💡 <b>Mode latihan:</b> Setelah jawaban dikumpulkan, kunci jawaban dan pembahasan sederhana untuk seluruh soal akan langsung ditampilkan di bawah hasil nilai.
+    </div>
+    <div class="score-big" style="color:var(--emerald)">${score}</div>
+    <div class="score-label">dari 100 poin</div>
+    <span class="predikat" style="background:${pc}20;color:${pc};border:2px solid ${pc}40">${predikat}</span>
+
+    <div class="donut-section">
+      <div class="donut-section-title">Laporan Skor</div>
+      <div style="display:flex;flex-direction:column;align-items:center">
+        <div class="donut-container">
+          <canvas id="donut-canvas" style="width:100%;height:100%;display:block;"></canvas>
+        </div>
+        <div class="donut-legend">
+          <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#059669"></div>Benar: <b style="color:#70f0b0">${correct}</b></div>
+          <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#ef4444"></div>Salah: <b style="color:#ffaaaa">${wrong}</b></div>
+          <div class="donut-legend-item"><div class="donut-legend-dot" style="background:#cbd5e1"></div>Belum Dijawab: <b style="color:#e3edf5">${skip}</b></div>
+        </div>
+        <div class="donut-total">Total Soal: <b>${soalData.length}</b></div>
+      </div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat-box correct-box"><div class="stat-num">${correct}</div><div class="stat-lbl">✅ Benar</div></div>
+      <div class="stat-box wrong-box"><div class="stat-num">${wrong}</div><div class="stat-lbl">❌ Salah</div></div>
+      <div class="stat-box skip-box"><div class="stat-num">${skip}</div><div class="stat-lbl">⏭ Dilewati</div></div>
+    </div>
+
+    ${violationCount > 0 ? `<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:10px;padding:10px 14px;margin-bottom:20px;font-size:13px;color:#856404">
+      ⚠️ Kamu tercatat melakukan <b>${violationCount} pelanggaran</b> keluar halaman selama ujian.
+    </div>` : ''}
+
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <button class="btn btn-accent" onclick="location.reload()">🔄 Ulangi Latihan</button>
+    </div>`;
+
+  showReview(false);
+
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  // Draw canvas after DOM render
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      drawDonut('donut-canvas', correct, wrong, skip, soalData.length, score);
+    });
+  });
+}
+
+function showReview(shouldScroll=true) {
+  const rev = document.getElementById('review-section');
+  rev.style.display='block';
+  let html=`<h2 style="font-size:18px;font-weight:800;color:var(--navy);margin-bottom:16px">📋 Review Pembahasan Lengkap</h2>`;
+  soalData.forEach((s,i) => {
+    const a=answers[i];
+    let status='skip';
+    if(isAnswered(s,a)) status=isCorrect(s,a)?'correct':'wrong';
+    const tipeBadge={pg:'Pilihan Ganda'};
+    html+=`<div class="review-item ${status}">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <span class="soal-num">No. ${s.no}</span>
+        <span class="tipe-badge tipe-${s.tipe}" style="font-size:10px">${tipeBadge[s.tipe]}</span>
+        <span style="margin-left:auto;font-size:12px;font-weight:700;color:${status==='correct'?'var(--emerald)':status==='wrong'?'var(--red)':'var(--muted)'}">
+          ${status==='correct'?'✅ Benar':status==='wrong'?'❌ Salah':'⏭ Dilewati'}</span>
+      </div>
+      <div style="font-size:13px;color:var(--muted);margin-bottom:8px">${s.tanya?s.tanya.replace(/\n/g,'<br>'):''}</div>
+      ${renderPembahasan(s,a)}
+    </div>`;
+  });
+  rev.innerHTML=html;
+  if(shouldScroll) rev.scrollIntoView({behavior:'smooth'});
+}
+
+// ═══════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════
+try {
+  if (!Array.isArray(soalData) || soalData.length !== 50) throw new Error('Bank soal tidak lengkap.');
+  buildNavigator();
+  updateNavigator();
+  renderSoal();
+  startTimer();
+} catch (err) {
+  console.error('Gagal memuat CBT:', err);
+  const card = document.getElementById('soal-card');
+  if (card) card.innerHTML = '<div style="padding:18px;color:#ffd2a8">Soal gagal dimuat. Muat ulang file HTML terbaru.</div>';
+}
+</script>
+</body>
+</html>
